@@ -1,0 +1,46 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Payroll Entry",
+  "enabled": 1,
+  "modified": "2025-08-28 21:29:07.459777",
+  "module": null,
+  "name": "Custom Payroll",
+  "script": "frappe.ui.form.on('Payroll Entry', {\r\n    get_employees: function(frm) {\r\n        frm.events.get_filterd_employees(frm);\r\n    },\r\n    get_filterd_employees: function(frm) {\r\n        frappe.call({\r\n            method: \"frappe.client.get_list\",\r\n            args: {\r\n                doctype: \"Employee\",\r\n                fields: [\"name\", \"tax_regime_preference\"],\r\n                filters: { \"status\": \"Active\" }\r\n            },\r\n            callback: function(r) {\r\n                r.message.forEach(emp => {\r\n                    let salary_structure = (emp.tax_regime_preference === \"Old\") \r\n                        ? \"Old Regime Structure\" \r\n                        : \"New Regime Structure\";\r\n                    // Logic to attach employee with correct structure\r\n                });\r\n            }\r\n        });\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Salary Structure Assignment",
+  "enabled": 1,
+  "modified": "2025-08-29 14:09:31.294600",
+  "module": "Hrms Customization",
+  "name": "Custom Regime",
+  "script": "frappe.ui.form.on('Salary Structure Assignment', {\r\n    employee(frm) {\r\n        if(frm.doc.employee) {\r\n            frappe.call({\r\n                method: \"frappe.client.get_value\",\r\n                args: {\r\n                    doctype: \"Employee\",\r\n                    filters: { name: frm.doc.employee },\r\n                    fieldname: [\"custom_tax_regime_preference\"]\r\n                },\r\n                callback(r) {\r\n                    if (r.message) {\r\n                        frm.set_value(\"salary_structure\", r.message.custom_tax_regime_preference);\r\n                    }\r\n                }\r\n            });\r\n        }\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Job Applicant",
+  "enabled": 1,
+  "modified": "2025-08-30 17:52:54.586751",
+  "module": "Hrms Customization",
+  "name": "Job Applicant to Employee",
+  "script": "frappe.ui.form.on('Job Applicant', {\r\n    workflow_state(frm) {\r\n        if (frm.doc.workflow_state === 'Hired') {\r\n            frappe.call({\r\n                method: \"frappe.client.insert\",\r\n                args: {\r\n                    doc: {\r\n                        doctype: \"Employee\",\r\n                        first_name: frm.doc.applicant_name,\r\n                        gender: frm.doc.gender,\r\n                        date_of_birth: frm.doc.date_of_birth,\r\n                        job_applicant: frm.doc.name,\r\n                        company: frm.doc.company,\r\n                        status: \"Active\"\r\n                    }\r\n                },\r\n                callback: function(r) {\r\n                    if (!r.exc) {\r\n                        frappe.msgprint(__('Employee {0} created successfully', [r.message.name]));\r\n                    }\r\n                }\r\n            });\r\n        }\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee",
+  "enabled": 1,
+  "modified": "2025-08-30 18:01:17.278699",
+  "module": "Hrms Customization",
+  "name": "Experience letter",
+  "script": "frappe.ui.form.on('Employee', {\n\trefresh(frm) {\n\t\tif(frm.doc.relieving_date){\n\t\t    frm.add_custom_button(\"Print Experience Letter\",()=>{\n\t\t        \n\t\t    })\n\t\t}\n\t}\n})",
+  "view": "Form"
+ }
+]

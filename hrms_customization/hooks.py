@@ -78,6 +78,7 @@ app_license = "mit"
 # 	"methods": "hrms_customization.utils.jinja_methods",
 # 	"filters": "hrms_customization.utils.jinja_filters"
 # }
+fixtures=["Custom Field","Client Script","Print Format","Workflow","Workflow State","Workflow Action"]
 
 # Installation
 # ------------

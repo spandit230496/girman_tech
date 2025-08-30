@@ -1,0 +1,254 @@
+[
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR User",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-28 20:24:53.430041",
+  "name": "ib7du3c8sb",
+  "permitted_roles": [
+   {
+    "parent": "ib7du3c8sb",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Joining"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR User",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-29 05:18:23.593154",
+  "name": "auceja7nak",
+  "permitted_roles": [
+   {
+    "parent": "auceja7nak",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Probation"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-29 05:18:50.425301",
+  "name": "b6p3h1444m",
+  "permitted_roles": [
+   {
+    "parent": "b6p3h1444m",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Confirmation"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR User",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-29 14:12:29.631853",
+  "name": "3sqr064g62",
+  "permitted_roles": [
+   {
+    "parent": "3sqr064g62",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00002",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Joining"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR User",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-29 14:34:57.567471",
+  "name": "h2052vvmf8",
+  "permitted_roles": [
+   {
+    "parent": "h2052vvmf8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00002",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Probation"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-29 14:35:11.987053",
+  "name": "h6h02hu4kq",
+  "permitted_roles": [
+   {
+    "parent": "h6h02hu4kq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00002",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Confirmation"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:32:36.673310",
+  "name": "4t0kltbf6i",
+  "permitted_roles": [
+   {
+    "parent": "4t0kltbf6i",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Employee",
+  "reference_name": "HR-EMP-00003",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Joining"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:47:53.491767",
+  "name": "drfrgd1h1j",
+  "permitted_roles": [
+   {
+    "parent": "drfrgd1h1j",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "Job Applicant",
+  "reference_name": "sandip1996pandit@gmail.com",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Job Opening"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:53:03.160484",
+  "name": "gs7uadbgmt",
+  "permitted_roles": [
+   {
+    "parent": "gs7uadbgmt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR Manager"
+   }
+  ],
+  "reference_doctype": "Job Applicant",
+  "reference_name": "sandip1996pandit@gmail.com",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Application"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR User",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:53:07.748536",
+  "name": "gtlbpeln09",
+  "permitted_roles": [
+   {
+    "parent": "gtlbpeln09",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR User"
+   }
+  ],
+  "reference_doctype": "Job Applicant",
+  "reference_name": "sandip1996pandit@gmail.com",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Screening"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "Interviewer",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:53:10.641984",
+  "name": "guiqgg80cb",
+  "permitted_roles": [
+   {
+    "parent": "guiqgg80cb",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "Interviewer"
+   }
+  ],
+  "reference_doctype": "Job Applicant",
+  "reference_name": "sandip1996pandit@gmail.com",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Interview"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "HR Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-08-30 17:53:14.417379",
+  "name": "gvomcb3867",
+  "permitted_roles": [
+   {
+    "parent": "gvomcb3867",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "HR Manager"
+   }
+  ],
+  "reference_doctype": "Job Applicant",
+  "reference_name": "sandip1996pandit@gmail.com",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Offer"
+ }
+]

@@ -1,0 +1,119 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2025-08-28 18:33:45.081675",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2025-08-28 18:33:45.084219",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2025-08-28 18:33:45.085775",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:07:19.977614",
+  "name": "Job Opening",
+  "style": "",
+  "workflow_state_name": "Job Opening"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:08:59.290612",
+  "name": "Offer",
+  "style": "",
+  "workflow_state_name": "Offer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:22:15.104863",
+  "name": "Joining",
+  "style": "",
+  "workflow_state_name": "Joining"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:46:14.373912",
+  "name": "Exit",
+  "style": "",
+  "workflow_state_name": "Exit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:08:00.618942",
+  "name": "Application",
+  "style": "",
+  "workflow_state_name": "Application"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:08:34.653824",
+  "name": "Screening",
+  "style": "",
+  "workflow_state_name": "Screening"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:08:46.259104",
+  "name": "Interview",
+  "style": "",
+  "workflow_state_name": "Interview"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:09:07.897324",
+  "name": "Hired",
+  "style": "",
+  "workflow_state_name": "Hired"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:22:28.490426",
+  "name": "Probation",
+  "style": "",
+  "workflow_state_name": "Probation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-28 19:46:03.285060",
+  "name": "Confirmation",
+  "style": "",
+  "workflow_state_name": "Confirmation"
+ }
+]
