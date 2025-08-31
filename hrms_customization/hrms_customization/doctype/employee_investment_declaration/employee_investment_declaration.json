@@ -1,82 +1,158 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2025-08-29 08:22:27.881883",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "section_break_voom"
- ],
- "fields": [
-    {
-      "fieldname": "employee",
-      "label": "Employee",
-      "fieldtype": "Link",
-      "options": "Employee",
-      "reqd": 1
-    },
-    {
-      "fieldname": "fiscal_year",
-      "label": "Fiscal Year",
-      "fieldtype": "Link",
-      "options": "Fiscal Year",
-      "reqd": 1
-    },
-    {
-      "fieldname": "section_80c_investments",
-      "label": "Section 80C (LIC, PPF, ELSS, etc.)",
-      "fieldtype": "Currency",
-      "default": "0"
-    },
-    {
-      "fieldname": "section_80d",
-      "label": "Section 80D (Medical Insurance)",
-      "fieldtype": "Currency",
-      "default": "0"
-    },
-    {
-      "fieldname": "other_exemptions",
-      "label": "Other Exemptions",
-      "fieldtype": "Currency",
-      "default": "0"
-    },
-    {
-      "fieldname": "total_declared_amount",
-      "label": "Total Declared Amount",
-      "fieldtype": "Currency",
-      "read_only": 1,
-      "formula": "doc.section_80c_investments + doc.section_80d + doc.other_exemptions"
-    },
-    {
-      "fieldname": "proof_attachment",
-      "label": "Proof Attachment",
-      "fieldtype": "Attach"
-    }
-  ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-08-29 08:22:27.881883",
- "modified_by": "Administrator",
- "module": "Hrms Customization",
- "name": "Employee Investment Declaration",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "row_format": "Dynamic",
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+    "doctype": "DocType",
+    "name": "Employee Investment Declaration",
+    "module": "Hrms Customization",
+    "is_submittable": 1,
+    "fields": [
+        {
+            "fieldname": "employee", 
+            "label": "Employee", 
+            "fieldtype": "Link", 
+            "options": "Employee", 
+            "reqd": 1
+        },
+        {
+            "fieldname": "employee_name", 
+            "label": "Employee Name", 
+            "fieldtype": "Data", 
+            "fetch_from": "employee.employee_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "financial_year", 
+            "label": "Financial Year", 
+            "fieldtype": "Data", 
+            "reqd": 1,
+            "default": "2024-2025"
+        },
+        {
+            "fieldname": "company", 
+            "label": "Company", 
+            "fieldtype": "Link", 
+            "options": "Company",
+            "reqd": 1
+        },
+        
+        {
+            "fieldname": "sb_80c", 
+            "label": "Section 80C Investments (Max: ₹1,50,000)", 
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "section_80c_investments", 
+            "label": "80C Investments", 
+            "fieldtype": "Table", 
+            "options": "Investment Detail 80C"
+        },
+        {
+            "fieldname": "total_80c", 
+            "label": "Total 80C Investment", 
+            "fieldtype": "Currency", 
+            "read_only": 1
+        },
+        {
+            "fieldname": "cb_80c", 
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "remaining_80c", 
+            "label": "Remaining 80C Limit", 
+            "fieldtype": "Currency", 
+            "read_only": 1,
+            "formula": "150000 - total_80c"
+        },        
+        {
+            "fieldname": "sb_80d", 
+            "label": "Section 80D Medical Insurance (Max: ₹1,00,000)", 
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "section_80d_investments", 
+            "label": "80D Medical Insurance", 
+            "fieldtype": "Table", 
+            "options": "Investment Detail 80D"
+        },
+        {
+            "fieldname": "total_80d", 
+            "label": "Total 80D Investment", 
+            "fieldtype": "Currency", 
+            "read_only": 1
+        },
+        {
+            "fieldname": "cb_80d", 
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "remaining_80d", 
+            "label": "Remaining 80D Limit", 
+            "fieldtype": "Currency", 
+            "read_only": 1,
+            "formula": "100000 - total_80d"
+        },
+        
+        {
+            "fieldname": "sb_other", 
+            "label": "Other Exemptions and Deductions", 
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "other_exemptions", 
+            "label": "Other Exemptions", 
+            "fieldtype": "Table", 
+            "options": "Other Exemption Detail"
+        },
+        {
+            "fieldname": "total_other", 
+            "label": "Total Other Exemptions", 
+            "fieldtype": "Currency", 
+            "read_only": 1
+        },
+        
+        {
+            "fieldname": "sb_totals", 
+            "label": "Total Declaration Summary", 
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "total_exemption", 
+            "label": "Total Tax Exemption", 
+            "fieldtype": "Currency", 
+            "read_only": 1,
+            "formula": "total_80c + total_80d + total_other"
+        },
+        {
+            "fieldname": "status", 
+            "label": "Status", 
+            "fieldtype": "Select", 
+            "options": "Draft\nSubmitted\nApproved\nRejected",
+            "default": "Draft"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "Employee", 
+            "read": 1, 
+            "write": 1, 
+            "create": 1,
+            "submit": 1,
+            "cancel": 0,
+            "delete": 0
+        },
+        {
+            "role": "HR Manager", 
+            "read": 1, 
+            "write": 1, 
+            "create": 1, 
+            "delete": 1,
+            "submit": 1,
+            "cancel": 1,
+            "approve": 1
+        },
+        {
+            "role": "Payroll Manager", 
+            "read": 1, 
+            "write": 0, 
+            "create": 0
+        }
+    ]
 }

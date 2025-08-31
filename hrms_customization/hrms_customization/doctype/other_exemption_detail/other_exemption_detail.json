@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-31 14:07:27.469017",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_szs9"
+ ],
+"fields": [
+        {
+            "fieldname": "exemption_type", 
+            "label": "Exemption Type", 
+            "fieldtype": "Select", 
+            "options": "House Rent Allowance\nLeave Travel Allowance\nEducation Allowance\nOther Special Allowances\nProfessional Tax\nStandard Deduction",
+            "reqd": 1,
+            "in_list_view": 1
+
+        },
+        {
+            "fieldname": "amount", 
+            "label": "Amount", 
+            "fieldtype": "Currency", 
+            "reqd": 1,
+                "in_list_view": 1
+        },
+        {
+            "fieldname": "description", 
+            "label": "Description", 
+            "fieldtype": "Text",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "financial_year", 
+            "label": "Financial Year", 
+            "fieldtype": "Data",
+            "reqd": 1,
+            "default": "2025-2026",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "proof_attached", 
+            "label": "Proof Attached", 
+            "fieldtype": "Check",
+                "in_list_view": 1
+        }
+    ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 14:07:27.469017",
+ "modified_by": "Administrator",
+ "module": "Hrms Customization",
+ "name": "Other Exemption Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

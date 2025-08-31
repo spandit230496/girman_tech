@@ -130,9 +130,10 @@ fixtures=["Custom Field","Client Script","Print Format","Workflow","Workflow Sta
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+     "Salary Slip": "hrms_customization.override.CustomSalarySlip"
+}
 
 # Document Events
 # ---------------

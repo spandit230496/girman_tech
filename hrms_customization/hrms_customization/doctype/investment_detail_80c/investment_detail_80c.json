@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-31 14:09:11.428551",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_p1ui"
+ ],
+"fields": [
+        {
+            "fieldname": "investment_type", 
+            "label": "Investment Type", 
+            "fieldtype": "Select", 
+            "options": "LIC\nPPF\nELSS\nNSC\nTuition Fees\nHome Loan Principal\nSSY\nTax Saving FD\nULIP\nPension Scheme",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "amount", 
+            "label": "Amount", 
+            "fieldtype": "Currency", 
+            "reqd": 1,
+             "in_list_view": 1
+        },
+        {
+            "fieldname": "proof_attached", 
+            "label": "Proof Attached", 
+            "fieldtype": "Check",
+             "in_list_view": 1
+        },
+        {
+            "fieldname": "proof_document", 
+            "label": "Proof Document", 
+            "fieldtype": "Attach",
+            "depends_on": "eval:doc.proof_attached == 1",
+             "in_list_view": 1
+        }
+    ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 14:09:11.428551",
+ "modified_by": "Administrator",
+ "module": "Hrms Customization",
+ "name": "Investment Detail 80C",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

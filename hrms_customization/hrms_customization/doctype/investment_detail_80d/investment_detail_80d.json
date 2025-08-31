@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-31 14:08:31.767145",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "insurance_type",
+  "amount",
+  "insured_person_name",
+  "insured_person_age",
+  "policy_number",
+  "proof_attached"
+ ],
+ "fields": [
+  {
+   "fieldname": "insurance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Insurance Type",
+   "options": "Self Medical Insurance\nParent Medical Insurance\nSenior Citizen Parent Insurance\nPreventive Health Checkup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insured_person_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insured Person Name"
+  },
+  {
+   "fieldname": "insured_person_age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Insured Person Age"
+  },
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "proof_attached",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Proof Attached"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Premium Amount",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 14:26:48.375090",
+ "modified_by": "Administrator",
+ "module": "Hrms Customization",
+ "name": "Investment Detail 80D",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
