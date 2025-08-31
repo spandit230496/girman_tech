@@ -39,6 +39,8 @@ It is built as a **separate app** to keep ERPNext core clean and upgrade-safe.
 - Support for **Old & New Tax Regimes**
 - Added custom field in **Employee** → *Tax Regime Preference*
 - <img width="1914" height="1026" alt="image" src="https://github.com/user-attachments/assets/4750cf20-be52-4ddc-a5d1-7cd9295ff262" />
+<img width="1739" height="967" alt="image" src="https://github.com/user-attachments/assets/1830e645-8d76-4270-830c-fe0048eb3c50" />
+
 
 - On payroll run → correct salary structure auto-picked
 - <img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/b42e9610-37b1-4012-b0cc-90cdb73c87ae" />
